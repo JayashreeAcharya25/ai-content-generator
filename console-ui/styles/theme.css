@@ -1,0 +1,58 @@
+:root {
+  --primary-purple: #8b5cf6;
+  --secondary-purple: #a78bfa;
+  --dark-bg: #0f172a;
+  --darker-bg: #020617;
+  --gradient-purple: radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+}
+
+body {
+  background-color: var(--darker-bg);
+  color: #f1f5f9;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(168, 85, 247, 0.2) 30%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.purple-button {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  transition: all 0.3s ease;
+}
+
+.purple-button:hover {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+}
+
+.purple-icon {
+  color: #8b5cf6;
+}
